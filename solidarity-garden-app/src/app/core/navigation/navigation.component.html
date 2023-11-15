@@ -1,0 +1,19 @@
+<nav class="navbar" [ngClass]="{'fixed': isFixed}" (window:scroll)="onScroll($event)">
+    <div class="navbar-toggle" (click)="toggleNavbar()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="navbar-links nav" [ngClass]="{ 'active': isNavbarOpen }">
+        <li><a routerLink="/home">Начало</a></li>
+        <li><a routerLink="/news">Новини</a></li>
+        <li><a routerLink="/activities">Дейности</a></li>
+        <li><a routerLink="/gallery">Галерия</a></li>
+        <li><a routerLink="/contacts">Свържи се с нас</a></li>
+    </ul>
+    <ul class="navbar-links social-medias" [ngClass]="{ 'active': isNavbarOpen }">
+        <li><i class="fa-brands fa-facebook"><a href=""></a></i></li>
+        <li><i class="fa-brands fa-instagram"><a href=""></a></i></li>
+        <li><i class="fa-brands fa-youtube"><a href=""></a></i></li>
+    </ul>
+</nav>
