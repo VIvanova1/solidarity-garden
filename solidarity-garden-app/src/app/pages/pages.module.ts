@@ -12,6 +12,10 @@ import { NewsComponent } from './news/news.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    HomeComponent,
+    NewsComponent
   ]
 })
 export class PagesModule { }
