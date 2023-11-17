@@ -1,0 +1,19 @@
+.field {
+}
+
+.field-img {
+  box-shadow: 1px 1px 5px #000000d6;
+}
+
+.field-img img {
+  width: 150px;
+  padding: 1em;
+}
+
+.field-text,
+.field-text h4{
+    margin: 1em 0;
+}
+.field-text h4{
+    text-transform: uppercase;
+}

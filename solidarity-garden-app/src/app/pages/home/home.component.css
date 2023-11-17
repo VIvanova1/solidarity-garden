@@ -1,3 +1,30 @@
-.container{
-    margin-top: 10em;
+.container {
+}
+
+.background-section {
+  background-image: url("../../../assets/background.jpg");
+  background-position: top;
+  height: 60vh;
+  background-size: 230%;
+  background-repeat: no-repeat;
+}
+
+#intro {
+  display: flex;
+  width: 90%;
+  text-align: center;
+  margin: 1em auto;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .background-section {
+    height: 100vh;
+    background-size: 170%;
+  }
+
+  #intro{
+    width: 60%;
+  }
 }
