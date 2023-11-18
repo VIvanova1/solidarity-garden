@@ -1,0 +1,25 @@
+.title {
+  padding: 1.5em 10em;
+}
+
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .news > * {
+    width: 45%;
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .news > * {
+    width: 27%;
+    margin: 0 15px;
+  }
+}
