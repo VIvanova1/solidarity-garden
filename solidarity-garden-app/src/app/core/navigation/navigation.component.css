@@ -1,103 +1,131 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3c8872;
-  transition: background-color 0.3s;
+#burger {
+  display: none;
+}
+
+input + label {
+  position: fixed;
+  z-index: 5;
+  height: 50px;
+  width: 50px;
+  top: 2%;
+  right: 5%;
+  border-radius: 50%;
+  box-shadow: 2px 0 9px black;
+}
+
+
+input , label {
+  background: white;
+}
+
+
+span {
+  position: absolute;
+  width: 60%;
+  height: 3%;
+  top: 50%;
+  margin-top: -1px;
+  left: 20%;
+  display: block;
+  background: rgb(0, 0, 0);
+  transition: 0.5s;
+  text-align: center;
+}
+
+span:first-child {
+  top: 35%;
+}
+
+span:last-child {
+  top: 66%;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+input:checked + label span {
+  opacity: 0;
+  top: 50%;
+}
+
+input:checked + label span:first-child {
+  opacity: 1;
+  transform: rotate(405deg);
+}
+
+input:checked + label span:last-child {
+  opacity: 1;
+  transform: rotate(-405deg);
+}
+
+input ~ nav {
+  background: transparent;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
-  padding: 10px;
+  height: 70px;
+  z-index: 3;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  overflow: hidden;
 }
 
-.fixed {
-  background-color: rgba(51, 51, 51, 0.7);
+input ~ nav {
+  text-align: center;
+  position: fixed;
+  right: 20%;
+
 }
 
-.navbar-toggle {
+input ~ nav ul {
+  padding-top: 45px;
+}
+
+input ~ nav li {
+  list-style-type: none;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+input ~ nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-family: sans-serif;
+  display: block;
+  padding: 30px;
+}
+
+input:checked ~ nav {
+  background: white ;
+  height: 100%;
+  transition-delay: 0s;
+}
+
+input:checked ~ nav li {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+
+
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+input+label{
   display: none;
-  flex-direction: column;
-  cursor: pointer;
 }
-
-.bar {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin: 3px 0;
+input:checked ~ nav {
+  height: 10%;
+  position: absolute;
 }
-
-.navbar-links {
-  list-style: none;
+input ~ nav ul{
   display: flex;
-  margin: 0;
   padding: 0;
 }
-
-.navbar-links li {
-  margin-right: 20px;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-.navbar-links i {
-  cursor: pointer;
-  color: #fff;
-}
-
-.navbar-links a:hover,
-.navbar-links i:hover {
-  color: #a9ada9;
-}
-
-.social-medias {
-  color: #fff;
-  font-size: 22px;
-}
-
-.active {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .social-medias {
-    display: none;
-    position: relative;
-    top: 0;
-    left: 0px;
-    background-color: #3c8872;
-    width: 100%;
-  }
-  .navbar {
-    padding: 0;
-  }
-  .nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 55px;
-    left: 0;
-    background-color: #3c8872;
-    width: 100%;
-  }
-
-  .navbar-toggle {
-    padding: 15px;
-  }
-  .navbar-links li {
-    padding: 15px 20px;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
-  .navbar-toggle {
-    display: flex;
-  }
 }
