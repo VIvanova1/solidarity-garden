@@ -7,6 +7,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation',
@@ -33,7 +34,9 @@ export class NavigationComponent {
   isDesktop: boolean = window.innerWidth > 678;
 
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(public translate: TranslateService,private elementRef: ElementRef) {
+
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
